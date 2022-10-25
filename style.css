@@ -1,3 +1,4 @@
+/* Globale */
 body {
     margin: 0px;
     min-height: 100vh;
@@ -5,39 +6,32 @@ body {
 }
 
 .header-nav {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     font-size: 1.7em;
     width: 100%;
     display: flex;
     align-items: baseline;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    padding-bottom: 2px;
 }
 
 .header-nav img {
-    margin: 2px 50px 0px 10px;
-}
-
-nav li {
-    display: none;
-}
-
-#hamburger-menu {
-    display: none;
-}
-
-#hamburger-menu:checked ~ nav li {
-    display: block;
+    max-width: 50px;
+    padding-top: 5px;
 }
 
 nav {
     position: fixed;
     z-index: 1000;
-    top: 57px;
-    background-color: rgba(0, 0, 0, 0.8);
+    top: 64px;
+    background-color: rgba(0, 0, 0, 0.9);
     max-width: 250px;
     padding: 10px;
     right: 0px;
+    display: none;
 }
 
 nav a {
@@ -50,38 +44,38 @@ nav li {
     padding: 15px;
 }
 
+nav ul {
+    margin: 0px;
+    list-style-type: none;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+    display: block;
+}
+
+.header-div {
+    display: grid;
+}
+
 header {
     background-image: url(../img/header-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 150px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h5 {
     font-family: Elevon;
     color: #FFF;
     text-align: center;
 }
 
-h2 {
-    padding: 0px 0px 25px;
-}
-
-.home-section-one, .home-section-two {
-    background-color: #2702F2;
-    width: 100%;
-    color: #FFF;
-    padding-bottom: 35px;
-}
-
-h3 {
-    padding: 20px;
-    font-size: 1.5em;
-}
-
-.home-section-one p {
-    max-width: 600px;
-    margin: 0px auto;
-    padding: 0px 15px;
+h1 {
+    margin: 80px auto 10px;
 }
 
 .button-img img {
@@ -111,7 +105,54 @@ a {
     color: #000;
 }
 
-.home-section-two p {
+footer {
+    background-color: #1B00AC;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-icons {
+    margin: auto;
+    font-size: 2.8em;
+    cursor: pointer;
+}
+
+.footer-icons i {
+    padding: 20px 5px;
+}
+
+.footer-copy {
+    margin: auto;
+}
+
+.button {
+    background-color: #BF62C6;
+    color: #FFF;
+    padding: 10px;
+    width: 100px;
+    border-radius: 6px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+
+/* Index */
+.home-section-one, .home-section-two {
+    background-color: #2702F2;
+    width: 100%;
+    color: #FFF;
+    padding-bottom: 35px;
+}
+
+h3 {
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.home-section-one p {
+    max-width: 600px;
     margin: 0px auto;
     padding: 0px 15px;
 }
@@ -119,11 +160,71 @@ a {
 .section-two-flex {
     display: flex;
     flex-direction: column; 
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+    align-items: center;
+}
+
+.home-section-two p {
+    margin: 0px auto;
+    padding: 0px 15px;
 }
 
 .section-two-flex img {
-    width: 400px;
+    width: 350px;
 }
+
+.home-section-three {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.home-visit, .home-our-goal {
+    background-color: #AE0FF2;
+    max-width: 400px;
+    min-height: 400px;
+    box-shadow: 2px 2px 1px #C4C4C4;
+}
+
+h5 {
+    font-size: 1.7em;
+}
+
+.home-section-three p {
+    padding: 0px 60px;
+    font-size: 1.3em;
+}
+
+/*Explore*/
+.explore-site {
+    margin: 0px 20px;
+    
+}
+
+.explore-site h3 {
+    color:#000;
+    text-transform: uppercase;
+}
+
+.images-bigger img {
+    width: 400px;
+    height: 350px;
+    border-radius: 6px;
+}
+
+.explore-kids, .explore-teachers, .explore-researchers {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 
 
 
@@ -136,7 +237,27 @@ a {
         max-width: 600px;
     }
 
-    .section-two-flex {
+    .section-two-flex, .home-section-three {
         flex-direction: row;
+    }
+
+
+}
+
+@media (min-width:699px) {
+    .explore-kids, .explore-researchers {
+        flex-direction: row;
+    }
+
+    .explore-teachers {
+        flex-direction: row-reverse;
+    }
+
+}
+
+@media (min-width:1000px) {
+    .explore-site {
+        max-width: 1000px;
+        margin: auto;
     }
 }
