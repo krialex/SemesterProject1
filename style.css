@@ -110,6 +110,7 @@ footer {
     color: #FFF;
     display: flex;
     flex-direction: column;
+    margin-top: 70px;
 }
 
 .footer-icons {
@@ -134,6 +135,14 @@ footer {
     border-radius: 6px;
     text-align: center;
     text-transform: capitalize;
+    transition-property: color border background-color;
+    transition-duration: 1s;
+}
+
+.button:hover {
+    color: #2702F2;
+    border: 1px solid #2702F2;
+    background-color: #FFF;
 }
 
 
@@ -148,7 +157,7 @@ footer {
 
 h3 {
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 .home-section-one p {
@@ -182,6 +191,7 @@ h3 {
     gap: 40px;
     justify-content: center;
     margin: 50px auto;
+    max-width: 380px;
 }
 
 .home-visit, .home-our-goal {
@@ -206,7 +216,7 @@ h5 {
     
 }
 
-.explore-site h3 {
+.explore-site h3, .news h3 {
     color:#000;
     text-transform: uppercase;
 }
@@ -215,6 +225,14 @@ h5 {
     width: 400px;
     height: 350px;
     border-radius: 6px;
+    transition-property: width height;
+    transition-duration: 2s;
+}
+
+.images-bigger img:hover {
+    width: 410px;
+    height: 360px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 .explore-kids, .explore-teachers, .explore-researchers {
@@ -225,10 +243,194 @@ h5 {
     margin-bottom: 40px;
 }
 
+/*Exhibition spaces*/
+.exhibition-flex h3 {
+    margin: 0;
+}
+
+.exhibition-flex {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: center;
+    max-width: 1000px;
+    gap: 50px;
+    padding-bottom: 20px;
+}
+
+.exhibition-img img {
+    width: 400px;
+    border-radius: 6px;
+    margin: 20px;
+}
+
+.exhibition-flex p {
+    padding: 0px 20px;
+    
+}
+
+.exhibition-one, .getinvolved-section-two {
+    background-color: #AE0FF2;
+}
+
+.exhibition-two {
+    background-color: #F2B921;
+}
+
+.exhibition-three {
+    background-color: #07BF00;
+}
+
+.exhibition-four, .getinvolved-section-three {
+    background-color: #F21B91;
+}
+
+.exhibition-five, .getinvolved-section-one {
+    background-color: #2702F2;
+}
 
 
+/*News*/
+.news {
+    text-align: center;
+}
+
+.only-big-screen-img, .only-big-screen-img1 {
+    display: none;
+}
+
+.news h4, .contact h4 {
+    font-family: Elevon;
+    font-size: 1.3em;
+}
+
+.news-section-one, .news-section-two, .news-section-three {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+.news p {
+    max-width: 500px;
+    margin: 0px auto 30px;
+    padding: 0px 10px;
+    text-align: initial;
+}
+
+.news-img {
+    display: flex;
+    gap: 20px;
+    margin: 5px auto 50px;
+}
+
+.news-img img {
+    width: 345px;
+    border-radius: 6px;
+    height: 300px;
+}
 
 
+.news .button-img, .explore-site .button-img {
+    max-width: 370px;
+}
+
+/*Get involved*/
+.getinvolved {
+    color: #FFF;
+}
+
+.getinvolved-section-one {
+    background-color: #2702F2;
+}
+
+.getinvolved-flex {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.getinvolved-p {
+    padding: 20px;
+    max-width: 600px;
+}
+
+.getinvolved h3, .contact-form h3 {
+    margin-bottom: 0px;
+}
+
+/*Contact*/
+.contact-form {
+    background-color: #F21B91;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 6px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+input, textarea {
+    min-width: 300px;
+    padding: 6px;
+    margin: 0px 20px;
+    font-size: 1em;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+input[type=submit] {
+    margin: 20px;
+    min-width: 200px;
+    border: 1px solid #BF62C6;
+}
+
+.contact-section {
+    background-color: #2702F2;
+    max-width: 380px;
+    height: 350px;
+    color: #FFF;
+    border-radius: 6px;
+}
+
+.contact-section h4 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contact-section p {
+    padding: 0px 30px;
+}
+
+.contact-section i {
+    display: block;
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 30px;
+}
+
+.contact-opening-hours p {
+    margin: 3px 0px;
+    text-align: center;
+}
+
+.contact-section-flex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    max-width: 380px;
+    margin: 50px auto;
+}
 
 
 @media (min-width:600px) {
@@ -237,20 +439,40 @@ h5 {
         max-width: 600px;
     }
 
-    .section-two-flex, .home-section-three {
+    .section-two-flex {
         flex-direction: row;
     }
 
+    input, textarea {
+        min-width: 500px;
+    }
 
 }
 
 @media (min-width:699px) {
-    .explore-kids, .explore-researchers {
+    .home-section-three {
+        max-width: 1000px;
+    }
+
+    .explore-kids, .explore-researchers, .exhibition-flex, .home-section-three {
         flex-direction: row;
     }
 
     .explore-teachers {
         flex-direction: row-reverse;
+    }
+
+    .exhibition-img img {
+        margin-right: 20px;
+    }
+
+    .only-big-screen-img {
+        display: block;
+    }
+
+    .contact-section-flex {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
     }
 
 }
@@ -260,4 +482,22 @@ h5 {
         max-width: 1000px;
         margin: auto;
     }
+
+    .only-big-screen-img1 {
+        display: block;
+    }
+
+    .getinvolved-flex {
+        flex-direction: row;
+    }
+
+    .getinvolved-p {
+        padding: 0px 50px;
+    }
+
+    .contact-section-flex {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+    }
+    
 }
