@@ -45,7 +45,7 @@ nav li {
 }
 
 nav ul {
-    margin: 0px;
+    margin: 0px 10px;
     list-style-type: none;
 }
 
@@ -55,6 +55,39 @@ nav ul {
 
 #hamburger-menu:checked ~ nav {
     display: block;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+.search-bar {
+    flex-direction: row;
+    gap: 0px;
+    margin-bottom: 3px;
+}
+
+.search-input {
+    max-width: 200px;
+    min-width: 27px;
+    width: 100%;
+    font-size: .6em;
+    padding: 2px;
+    margin: 0px;
+    border-radius: 6px 0px 0px 6px;
+    border: 1px solid transparent;
+}
+
+.search-btn {
+    background-color: #FFF;
+    border: 1px solid transparent;
+    padding: 3.7px;
+    border-radius: 0px 6px 6px 0px;
+    cursor: pointer;
+}
+
+.fa-solid:hover, .fa-brands:hover, nav a:hover {
+    color: #07BF00;
 }
 
 .header-div {
@@ -93,7 +126,16 @@ h1 {
     align-items: center;
     padding-left: 20px;
     text-align: center;
-    font-family: Elevon;;
+    font-family: Elevon;
+}
+
+.btn-img-hover a {
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+.btn-img-hover a:hover {
+    color: #2702F2;
 }
 
 h4 {
@@ -135,6 +177,7 @@ footer {
     border-radius: 6px;
     text-align: center;
     text-transform: capitalize;
+    border: 1px solid #BF62C6;
     transition-property: color border background-color;
     transition-duration: 1s;
 }
@@ -145,7 +188,7 @@ footer {
     background-color: #FFF;
 }
 
-
+/*fiks bilder på exhibition spaces mobil version - 300px width på mellom 699 og 1000. 400px igjen på 1000*/
 
 /* Index */
 .home-section-one, .home-section-two {
@@ -213,7 +256,6 @@ h5 {
 /*Explore*/
 .explore-site {
     margin: 0px 20px;
-    
 }
 
 .explore-site h3, .news h3 {
@@ -221,19 +263,18 @@ h5 {
     text-transform: uppercase;
 }
 
-.images-bigger img {
-    width: 400px;
-    height: 350px;
-    border-radius: 6px;
-    transition-property: width height;
-    transition-duration: 2s;
+.explore-site h3 {
+    font-size: 1.2em;
 }
 
-.images-bigger img:hover {
-    width: 410px;
-    height: 360px;
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+.images-bigger img {
+    max-width: 400px;
+    /*height: 350px;*/
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
+
 
 .explore-kids, .explore-teachers, .explore-researchers {
     display: flex;
@@ -243,7 +284,15 @@ h5 {
     margin-bottom: 40px;
 }
 
+
 /*Exhibition spaces*/
+.exhibition-flex {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /*fiks dette*/
+}
+
+
 .exhibition-flex h3 {
     margin: 0;
 }
@@ -257,12 +306,6 @@ h5 {
     max-width: 1000px;
     gap: 50px;
     padding-bottom: 20px;
-}
-
-.exhibition-img img {
-    width: 400px;
-    border-radius: 6px;
-    margin: 20px;
 }
 
 .exhibition-flex p {
@@ -305,6 +348,10 @@ h5 {
     font-size: 1.3em;
 }
 
+.news .button-img h4 {
+    font-size: 1em;
+}
+
 .news-section-one, .news-section-two, .news-section-three {
     max-width: 1100px;
     display: flex;
@@ -325,14 +372,21 @@ h5 {
     margin: 5px auto 50px;
 }
 
-.news-img img {
-    width: 345px;
+.news-img img, .skeleton-img img, .exhibition-img img {
     border-radius: 6px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    max-width: 345px;
+    margin: 0px auto;
+}
+
+.skeleton-img img {
+    max-height: 300px;
+    max-width: 420px;
 }
 
 
-.news .button-img, .explore-site .button-img {
+.news .button-img, .explore-site .button-img, .exhibition-site .button-img {
     max-width: 370px;
 }
 
@@ -374,8 +428,8 @@ h5 {
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 2px;
+    align-items: center;
 }
 
 input, textarea {
@@ -432,6 +486,10 @@ input[type=submit] {
     margin: 50px auto;
 }
 
+.contact .fa-solid:hover{
+    color: #FFF;
+}
+
 
 @media (min-width:600px) {
     .button-img {
@@ -450,6 +508,10 @@ input[type=submit] {
 }
 
 @media (min-width:699px) {
+    .search-box {
+        max-width: 300px;
+    }
+
     .home-section-three {
         max-width: 1000px;
     }
@@ -462,8 +524,14 @@ input[type=submit] {
         flex-direction: row-reverse;
     }
 
+    .explore-kids div, .explore-teachers div, .explore-researchers div {
+        max-width: 400px;
+    }
+    
     .exhibition-img img {
-        margin-right: 20px;
+        margin: 20px;
+        width: 400px;
+        
     }
 
     .only-big-screen-img {
@@ -483,6 +551,10 @@ input[type=submit] {
         margin: auto;
     }
 
+    .explore-kids div, .explore-teachers div, .explore-researchers div {
+        max-width: 540px;
+    }
+
     .only-big-screen-img1 {
         display: block;
     }
@@ -498,6 +570,37 @@ input[type=submit] {
     .contact-section-flex {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1000px;
+    }
+
+    .header-nav {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .header-nav label {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        position: static;
+        max-width: 630px;
+        padding: 0px;
+        grid-column: 4 / span 3;
+        font-size: .7em;
+        background-color: transparent;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 2px 4px;
+    }
+
+    nav ul {
+        padding: 0px;
     }
     
 }
