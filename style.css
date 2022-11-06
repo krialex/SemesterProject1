@@ -72,7 +72,7 @@ nav ul {
     min-width: 27px;
     width: 100%;
     font-size: .6em;
-    padding: 2px;
+    padding: 1.8px;
     margin: 0px;
     border-radius: 6px 0px 0px 6px;
     border: 1px solid transparent;
@@ -86,7 +86,7 @@ nav ul {
     cursor: pointer;
 }
 
-.fa-solid:hover, .fa-brands:hover, nav a:hover {
+.fa-solid:hover, .fa-brands:hover, nav a:hover, .footer-link:hover {
     color: #07BF00;
 }
 
@@ -169,26 +169,31 @@ footer {
     margin: auto;
 }
 
+.footer-link {
+    text-decoration: none;
+    color: #FFF;
+    cursor: pointer;
+}
+
 .button {
-    background-color: #BF62C6;
+    background-color: #1D7D8C;
     color: #FFF;
     padding: 10px;
     width: 100px;
     border-radius: 6px;
     text-align: center;
     text-transform: capitalize;
-    border: 1px solid #BF62C6;
+    border: 2px solid #1D7D8C;
     transition-property: color border background-color;
     transition-duration: 1s;
 }
 
 .button:hover {
-    color: #2702F2;
-    border: 1px solid #2702F2;
+    color: #1D7D8C;
+    border: 2px solid #1D7D8C;
     background-color: #FFF;
 }
 
-/*fiks bilder på exhibition spaces mobil version - 300px width på mellom 699 og 1000. 400px igjen på 1000*/
 
 /* Index */
 .home-section-one, .home-section-two {
@@ -269,7 +274,6 @@ h5 {
 
 .images-bigger img {
     max-width: 400px;
-    /*height: 350px;*/
     width: 100%;
     height: auto;
     border-radius: 6px;
@@ -286,13 +290,6 @@ h5 {
 
 
 /*Exhibition spaces*/
-.exhibition-flex {
-    animation-name: fade;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /*fiks dette*/
-}
-
-
 .exhibition-flex h3 {
     margin: 0;
 }
@@ -318,15 +315,15 @@ h5 {
 }
 
 .exhibition-two {
-    background-color: #F2B921;
+    background-color: #E01987;
 }
 
 .exhibition-three {
-    background-color: #07BF00;
+    background-color: #068A01;
 }
 
 .exhibition-four, .getinvolved-section-three {
-    background-color: #F21B91;
+    background-color: #CC00BE;
 }
 
 .exhibition-five, .getinvolved-section-one {
@@ -380,12 +377,6 @@ h5 {
     margin: 0px auto;
 }
 
-.skeleton-img img {
-    max-height: 300px;
-    max-width: 420px;
-}
-
-
 .news .button-img, .explore-site .button-img, .exhibition-site .button-img {
     max-width: 370px;
 }
@@ -419,9 +410,9 @@ h5 {
 
 /*Contact*/
 .contact-form {
-    background-color: #F21B91;
+    background-color: #CC00BE;
     max-width: 600px;
-    margin: auto;
+    margin: 0px 10px;
     border-radius: 6px;
 }
 
@@ -433,20 +424,19 @@ form {
 }
 
 input, textarea {
-    min-width: 300px;
+    width: 80%;
     padding: 6px;
     margin: 0px 20px;
     font-size: 1em;
 }
 
 textarea {
-    min-height: 150px;
+    min-height: 200px;
 }
 
 input[type=submit] {
     margin: 20px;
     min-width: 200px;
-    border: 1px solid #BF62C6;
 }
 
 .contact-section {
@@ -503,6 +493,10 @@ input[type=submit] {
 
     input, textarea {
         min-width: 500px;
+    }
+
+    .contact-form {
+        margin: auto;
     }
 
 }
@@ -602,5 +596,11 @@ input[type=submit] {
     nav ul {
         padding: 0px;
     }
+
+    .skeleton-img img {
+        max-height: 300px;
+        max-width: 420px;
+    }
+    
     
 }
