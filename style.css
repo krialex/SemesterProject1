@@ -228,8 +228,12 @@ h3 {
     padding: 0px 15px;
 }
 
+.h-s-two-image {
+    max-width: 350px;
+}
+
 .section-two-flex img {
-    width: 350px;
+    width: 100%;
 }
 
 .home-section-three {
