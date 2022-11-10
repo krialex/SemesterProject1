@@ -423,15 +423,26 @@ form {
     align-items: center;
 }
 
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form label {
+    margin-left: 30px;
+    color: #FFF;
+}
+
 input, textarea {
-    width: 80%;
     padding: 6px;
-    margin: 0px 20px;
+    margin: 0px 30px;
     font-size: 1em;
 }
 
 textarea {
     min-height: 200px;
+
 }
 
 input[type=submit] {
@@ -492,7 +503,7 @@ input[type=submit] {
     }
 
     input, textarea {
-        min-width: 500px;
+        min-width: 400px;
     }
 
     .contact-form {
