@@ -16,6 +16,7 @@ body {
     position: fixed;
     top: 0;
     padding-bottom: 2px;
+    z-index: 2;
 }
 
 .header-nav img {
@@ -68,22 +69,25 @@ nav ul {
 }
 
 .search-input {
+    -webkit-appearance: none;
     max-width: 200px;
     min-width: 27px;
     width: 100%;
     font-size: .6em;
-    padding: 1.8px;
+    padding: 2.8px;
     margin: 0px;
+    border: none;
+    outline: none;
     border-radius: 6px 0px 0px 6px;
-    border: 1px solid transparent;
 }
 
 .search-btn {
     background-color: #FFF;
-    border: 1px solid transparent;
-    padding: 3.7px;
-    border-radius: 0px 6px 6px 0px;
+    border: none;
+    outline: none;
+    padding: 4.7px;
     cursor: pointer;
+    border-radius: 0px 6px 6px 0px;
 }
 
 .fa-solid:hover, .fa-brands:hover, nav a:hover, .footer-link:hover {
@@ -115,7 +119,7 @@ h1 {
     height: 200px;
     border-radius: 100%;
     width: 165px;
-    box-shadow: 2px 2px 1px #C4C4C4;
+    
 }
 
 .button-img {
@@ -184,7 +188,6 @@ footer {
     text-align: center;
     text-transform: capitalize;
     border: 2px solid #1D7D8C;
-    transition-property: color border background-color;
     transition-duration: 1s;
 }
 
@@ -281,6 +284,13 @@ h5 {
     width: 100%;
     height: auto;
     border-radius: 6px;
+    
+}
+
+.images-bigger img:hover, .exhibition-img img:hover, .button-img img:hover {
+    transform: scale(1.02);
+    transition-duration: 1s;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3); 
 }
 
 
