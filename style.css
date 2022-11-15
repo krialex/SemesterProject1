@@ -3,6 +3,7 @@ body {
     margin: 0px;
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .header-nav {
@@ -287,7 +288,7 @@ h5 {
     
 }
 
-.images-bigger img:hover, .exhibition-img img:hover, .button-img img:hover {
+.button-img img:hover, .home-visit:hover, .home-our-goal:hover, .contact-section:hover {
     transform: scale(1.02);
     transition-duration: 1s;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3); 
