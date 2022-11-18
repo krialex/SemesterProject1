@@ -3,7 +3,6 @@ body {
     margin: 0px;
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
 .header-nav {
@@ -100,11 +99,11 @@ nav ul {
 }
 
 header {
-    background-image: url(../img/header-image.jpg);
+    background-image: url(../img/background-img1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 150px;
-}
+}  
 
 h1, h2, h3, h5 {
     font-family: Elevon;
@@ -181,20 +180,20 @@ footer {
 }
 
 .button {
-    background-color: #1D7D8C;
+    background-color: #7100B1;
     color: #FFF;
     padding: 10px;
     width: 100px;
     border-radius: 6px;
     text-align: center;
     text-transform: capitalize;
-    border: 2px solid #1D7D8C;
+    border: 1px solid #FFF;
     transition-duration: 1s;
 }
 
 .button:hover {
-    color: #1D7D8C;
-    border: 2px solid #1D7D8C;
+    color: #7100B1;
+    border: 1px solid #7100B1;
     background-color: #FFF;
 }
 
