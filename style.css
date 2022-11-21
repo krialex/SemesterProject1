@@ -470,6 +470,8 @@ input[type=submit] {
     height: 350px;
     color: #FFF;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-section h4 {
@@ -486,6 +488,11 @@ input[type=submit] {
     text-align: center;
     font-size: 2.5em;
     padding-top: 30px;
+    flex-grow: 1;
+}
+
+.fa-dollar-sign, .fa-wheelchair, .fa-utensils {
+    margin-top: 33px;
 }
 
 .contact-opening-hours p {
