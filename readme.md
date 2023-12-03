@@ -18,8 +18,6 @@ This was a task that instructed me to create a website for the museum that shoul
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 Clone the repo:
 
 > git clone https://github.com/krialex/SemesterProject1.git
