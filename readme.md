@@ -28,6 +28,6 @@ Clone the repo:
 
 Here is my contact information if you want to contact me:
 
-[LinkedIn](https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin "KristineAlexandersen profile")
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Kristine-blue)](https://www.linkedin.com/in/kristine-alexandersen-14144070/)
 
 <krigulland@gmail.com>
